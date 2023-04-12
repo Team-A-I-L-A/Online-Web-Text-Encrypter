@@ -3,10 +3,14 @@ This repository stores all the resources and codes made in HTML, CSS and Javascr
 
 #challengeonecodificador4
 
-## Author 👤
-**Luis Ángel Sánchez Aguilar** -> Code and electronic design
+## Lead Developers 👤
+**Luis Ángel Sánchez Aguilar**
 
 * [LinkedIn](https://www.linkedin.com/in/sanchezluismachinelearning/)
+
+**Roger Aldo Acosta Baltodano**
+
+* [LinkedIn](https://www.linkedin.com/in/roger-aldo-acosta-baltodano/)
 
 
 ## Folders description 📁
@@ -46,5 +50,4 @@ https://billslasa.github.io/Online-Web-Text-Encrypter/
 
 
 ## Hiring 🤝🏿
-
-If you wish to hire me, please contact me at the following e-mail address: luislasabills@gmail.com
+If you wish to hire us, please contact us at the following e-mail address: t3.aila.dev@gmail.com
