@@ -1,0 +1,282 @@
+/*   ############################################################   -->
+<!-- ################### ENCRIPTADOR DE TEXTO ###################   -->
+<!-- ############################################################   -->
+<!-- Hecho por Luis Ángel Sánchez Aguilar                           -->
+<!-- https://www.linkedin.com/in/sanchezluismachinelearning         -->
+<!-- https://github.com/BillsLasa                                   -->
+<!-- https://www.youtube.com/@billslasa                             -->
+<!-- ############################################################   */
+
+body{
+    font-family: 'Chivo Mono', monospace;
+}
+
+header{
+    background: linear-gradient(#b5ecd8 50%, #EEEEEE);
+    /*background-color: #19aa75;
+    border-bottom: #000000;
+    border-style:inset;*/
+}
+
+.encabezado{
+    width: 90%;
+    position: relative;
+    margin: 0 auto;
+    padding: 10px 0;
+}
+
+.logo{
+    display: inline-block;
+    vertical-align: middle;
+    vertical-align: auto;
+}
+
+.marca{
+    font-size: 2em;
+    display: inline-block;
+    vertical-align: auto;
+    position: relative;
+    top: 0.4em;
+}
+
+.marca::first-letter{
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.eslogan{
+    font-size: 1.3em;
+    display: inline-block;
+    vertical-align: auto;
+    position: relative;
+    top: 0.5em;
+    margin: 0px 0px 0px 15px;
+}
+
+.cuerpo{
+    background-color: #EEEEEE;
+    padding: 60px 20px;
+}
+
+.io-texto{
+    width: 90%;
+    margin: 0 auto;
+}
+
+.i-texto{
+    width: 54%;
+    margin: 0 auto;
+    display: inline-block;
+    margin: 0 50px 0 0;
+    vertical-align: top;
+}
+
+.o-texto{
+    width: 36%;
+    margin: 0 auto;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.label-input, .label-output{
+    display: block;
+}
+
+.input-texto-box, .output-texto-box{
+    resize: none;
+    margin: 10px 0 0 0;
+    width: 100%;
+    font-size: 1.3em;
+    border-color: #00000070;
+    padding: 15px;
+}
+
+
+.input-boton, .output-boton{
+    text-align: center;
+    margin: 20px 0;
+}
+
+.encriptar-boton, .desencriptar-boton, .configurar-boton{
+    display: inline-block;
+    margin: 0 20px;
+    vertical-align: middle;
+}
+
+.boton-e, .boton-d{
+    padding: 5px;
+    width: 120px;
+    height: 40px;
+    font-size: 0.9em;
+    font-weight: bold;
+
+    background-color:rgb(14, 82, 57);
+    color: #FFFFFF;
+    border-radius: 10px;
+    border-width: 2px;
+}
+
+.boton-e:hover, .boton-d:hover{
+    background-color:rgb(25, 134, 94);
+    transform: scale(1.05);
+    transition: 100ms;
+}
+
+.boton-e:active, .boton-d:active{
+    background-color:rgb(106, 216, 50);
+    transform: scale(1.1);
+    transition: 50ms;
+}
+
+.boton-c{
+    width: 45px;
+    height: 38px;
+    font-size: 0.8em;
+    font-weight: bold;
+
+    background-color:rgb(62, 147, 116);
+    border-radius: 10px;
+    border-width: 2px;
+}
+
+.boton-c:hover{
+    background-color:rgb(9, 69, 47);
+    transform: scale(1.05);
+    transition: 100ms;
+}
+
+.boton-c:active{
+    background-color:rgb(106, 216, 50);
+    transform: scale(1.1);
+    transition: 50ms;
+}
+
+.iconoConfigurar{
+    width: 70%;
+    height: 70%;
+    vertical-align: middle;
+}
+
+.boton-co{
+    padding: 5px;
+    width: 120px;
+    height: 40px;
+    font-size: 0.9em;
+    font-weight: bold;
+
+    background-color:rgb(180, 180, 180);
+    color: #000000;
+    border-radius: 10px;
+    border-width: 2px;
+}
+
+.boton-co:hover{
+    background-color:rgb(103, 103, 103);
+    transform: scale(1.05);
+    transition: 100ms;
+}
+
+.boton-co:active{
+    background-color:rgb(106, 216, 50);
+    transform: scale(1.1);
+    transition: 50ms;
+}
+
+footer{
+    text-align: center;
+    background: url(../imagenes/textura_footer.jpg);
+    padding: 20px;
+}
+
+.copyright{
+    color: #000000;
+    font-size: 13px;
+    margin: 10px;
+}
+
+.derecho-autor-imagen-footer{
+    color: #000000;
+    font-size: 13px;
+    margin: 20px;
+    font-size: 0.7em;
+}
+
+.nombre-autor{
+    font-size: 0.9em;
+}
+
+.logo-linkedin, .logo-github, .logo-youtube{
+    width: 30px;
+
+}
+
+
+/*ESTILO DEL POP-UP*/
+.menu-configuracion{
+    background-color: #EEEEEE;
+}
+
+.titulo-configuracion{
+    font-size: 1.2em;
+    font-weight: bold;
+    margin: 0 0 15px 0;
+}
+
+.titulo-privada, .titulo-publica, .titulo-avanzada{
+    font-weight: bold;
+    text-align: center;
+    margin: 20px 0 15px 0;
+}
+
+.cifrados{
+    margin: 0 0 20px;
+    vertical-align: top;
+}
+
+.cifrados-clave-privada, .cifrados-clave-publica, .cifrados-clave-avanzada{
+    display: inline-block;
+    padding: 0 20px;
+    vertical-align: top;
+}
+
+.botones-popup{
+    text-align: right;
+    margin: 30px 50px 0;
+}
+
+.boton-popup{
+    display: inline-block;
+}
+
+.boton-aceptar, .boton-cancelar{
+    font-size: 1em;
+    font-weight: bold;
+    padding: 5px;
+    width: 120px;
+    height: 40px;
+
+    background-color:rgb(14, 82, 57);
+    color: #FFFFFF;
+    border-radius: 10px;
+    border-width: 2px;
+}
+
+.boton-aceptar:hover, .boton-cancelar:hover{
+    background-color:rgb(25, 134, 94);
+    transform: scale(1.05);
+    transition: 100ms;
+}
+
+.boton-aceptar:active, .boton-cancelar:active{
+    background-color:rgb(106, 216, 50);
+    transform: scale(1.1);
+    transition: 50ms;
+}
+
+.radioboton{
+    font-size: 0.9em;
+} 
+
+#menuConfiguracion::backdrop{
+    background-color: rgba(0,0,0,0.85);
+}

@@ -1,0 +1,182 @@
+<!-- ############################################################   -->
+<!-- ################### ENCRIPTADOR DE TEXTO ###################   -->
+<!-- ############################################################   -->
+<!-- Hecho por Luis Ángel Sánchez Aguilar                           -->
+<!-- https://www.linkedin.com/in/sanchezluismachinelearning         -->
+<!-- https://github.com/BillsLasa                                   -->
+<!-- https://www.youtube.com/@billslasa                             -->
+<!-- ############################################################   -->
+
+<!DOCTYPE html>     <!-- Indicar protocolo HTML5 para el navegador -->
+
+<!-- Establecer lenguaje a reconocer por el navegador respecto a sus caracteres (Español) -->
+<html lang = "es">
+    <!-- Información de la página web -->
+    <head>
+        <meta charset = "UTF-8">                                    <!-- Establecer codificación de caracteres -->
+        <meta name = "viewport" content = "width=device-width">     <!-- Característica responsiva distintos dispositivos -->
+        <title>LEncrypT - Encriptador de Texto</title>              <!-- Título a mostrar en la pestaña del navegador -->
+        <link rel = "stylesheet" href = "estilos/reset.css">        <!-- Quitar toda configuración de estilo por defecto -->
+        <link rel = "stylesheet" href = "estilos/style-index.css">  <!-- Enlaza a un nuevo archivo de estilo para esta página -->
+
+
+        <!-- Obtener fuente de la web de google (Chivo Mono) -->
+        <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Chivo+Mono:wght@300&display=swap" rel="stylesheet">
+    </head>
+    
+    <!-- Contenido de la página web -->
+    <body id = "paginaPrincipal">
+        <!-- Contenido de la cabecera -->
+        <header>
+            <div class = "encabezado">
+                <img class = "logo" src = "imagenes/logo_oscuro.png" alt = "Logo de LEncrypT">
+                <h1 class = "marca">LEncrypT</h1>
+                <h2 class = "eslogan">El Encriptador de Texto Multialgoritmo</h2>
+            </div>
+        </header>
+
+        <!-- Contenido del cuerpo -->
+        <main>
+            <div class = "cuerpo">
+                <ul class = "io-texto">
+                    <!-- Item de lista no ordenada que contendrá los objetos para la entrada de texto-->
+                    <li class = "i-texto">
+                        <ul class = "input">
+                            <!-- Item de lista no ordenada que contendrá los elementos de la caja de texto -->
+                            <li class = "input-texto">
+                                <form>
+                                    <label class = "label-input" for = "labelInputText">Introduzca el texto que desee encriptar/desencriptar</label>
+                                    <textarea class = "input-texto-box" rows = "15" id = "labelInputText" required placeholder="Aquí escriba su texto"></textarea>
+                                </form>
+                            </li>
+
+                            <!-- Item de lista no ordenada que contendrá los botones -->
+                            <li class = "input-boton">
+                                <ul class = "boton">
+                                    <li class = "encriptar-boton">
+                                        <button class = "boton-e">Encriptar</button>
+                                    </li>
+                                    <li class = "desencriptar-boton">
+                                        <button class = "boton-d">Desencriptar</button>
+                                    </li>
+                                    <li class = "configurar-boton">
+                                        <button class = "boton-c" id = "abrir-configuracion"><img class = "iconoConfigurar" src = "imagenes/configurar.png" alt = "Símbolo de botón configurar"></button>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    
+                    <!-- Item de lista no ordenada que contendrá los objetos para la salida de texto-->
+                    <li class = "o-texto">
+                        <ul class = "output">
+                            <!-- Item de lista no ordenada que contendrá los elementos de la caja de texto -->
+                            <li class = "output-texto">
+                                <form>
+                                    <label class = "label-output" for = "labelOutputText">Su mensaje encriptado/desencriptado es: </label>
+                                    <textarea class = "output-texto-box" rows = "15" id = "labelOutputText" required disabled></textarea>
+                                </form>
+                            </li>
+
+                            <!-- Item de lista no ordenada que contendrá los botones -->
+                            <li class = "output-boton">
+                                <button class = "boton-co">Copiar</button>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>  
+            </div>
+
+        </main>
+
+        <!-- Contenido del pie de página -->
+        <footer>
+            <!-- Logo y derechos de autor -->
+            <div class = "footer-principal">
+                <img class = "logo-monocromo" src = "imagenes/logo_oscuro.png" alt = "Textura del Pie de Página">
+                <p class = "copyright">&copy Copyright LEncrypT - 2022</p>
+                <p class = "derecho-autor-imagen-footer"><a href="https://www.freepik.es/foto-gratis/fondo-textura-acuarela-verde-cal_4750954.htm#query=texture%20green&position=13&from_view=search&track=sph">Textura del pie de página hecha por saragnzalez</a> en Freepik</p>
+            </div>
+            
+            <!-- Autor de la página web y sus páginas personales de contacto -->
+            <div class = "footer-autor">
+                <p class = "nombre-autor">Página hecha por Luis Ángel Sánchez Aguilar</p>
+                <div class = "paginas-autor">
+                    <a href = "https://www.linkedin.com/in/sanchezluismachinelearning"><img class = "logo-linkedin" src = "imagenes/logo_linkedin.png" alt = "Logo de linkedin"></a>
+                    <a href = "https://github.com/BillsLasa"><img class = "logo-github" src = "imagenes/logo_github.png" alt = "Logo de github"></a>
+                    <a href = "https://www.youtube.com/@billslasa"><img class = "logo-youtube" src = "imagenes/logo_youtube.png" alt = "Logo de youtube"></a>
+                </div>
+            </div>
+        </footer>
+
+        <!-- Ventana modal o Pop-up -->
+        <dialog id = "menuConfiguracion">
+            <h2 class = "titulo-configuracion">Elija el método de cifrado que desee: </h2>
+
+            <ul class = "cifrados">
+                <li class = "cifrados-clave-privada">
+                    <p class = "titulo-privada">Cifrados de Clave Privada</p>
+                    <ul class = "clave-privada">
+                        <li class = "cesar">
+                            <label class = "radioboton" for = "radio-cesar">
+                                <input class = "cesar-r" type = "radio" name = "cifrado" value = "cesarR" id = "radio-cesar">
+                                Cifrado César
+                            </label>
+                        </li>
+                        <li class = "hill">
+                            <label class = "radioboton" for = "radio-hill">
+                                <input class = "hill-r" type = "radio" name = "cifrado" value = "hillR" id = "radio-hill">
+                                Cifrado Hill
+                            </label>
+                        </li>
+                        <li class = "afin">
+                            <label class = "radioboton" for = "radio-afin">
+                                <input class = "afin-r" type = "radio" name = "cifrado" value = "afinR" id = "radio-afin">
+                                Cifrado Afín
+                            </label>
+                        </li>
+                    </ul>
+                </li>
+                <li class = "cifrados-clave-publica">
+                    <p class = "titulo-publica">Cifrados de Clave Pública</p>
+                    <ul class = "clave-publica">
+                        <li class = "rsa">
+                            <label class = "radioboton" for = "radio-rsa">
+                                <input class = "rsa-r" type = "radio" name = "cifrado" value = "rsaR" id = "radio-rsa">
+                                Cifrado RSA
+                            </label>
+                        </li>
+                    </ul>
+                    
+                </li>
+                <li class = "cifrados-clave-avanzada">
+                    <p class = "titulo-avanzada">Cifrados Avanzados</p>
+                    <ul class = "clave-avanzada">
+                        <li class = "alura">
+                            <label class = "radioboton" for = "radio-alura">
+                                <input class = "alura-r" type = "radio" name = "cifrado" value = "aluraR" id = "radio-alura" checked>
+                                Cifrado ALURA
+                            </label>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+
+            <ul class = "botones-popup">
+                <li class = "boton-popup"><button class = "boton-aceptar" id = "aceptar-configuracion">&#10004 Aceptar</button></li>
+                <li class = "boton-popup"><button class = "boton-cancelar" id = "cerrar-configuracion">&#10060 Cancelar</button></li>
+            </ul>
+
+        </dialog>
+
+        <script src = "scripts/script-index.js"></script>
+        <script src = "scripts/textos.js"></script>
+        <script src = "scripts/matrices.js"></script>
+        <script src = "scripts/modular.js"></script>
+        <script src = "scripts/cifrado_alura.js"></script>
+        <script src = "scripts/cifrado_cesar.js"></script>
+        <script src = "scripts/cifrado_hill.js"></script>
+        <script src = "scripts/cifrado_afin.js"></script>
+        <script src = "scripts/cifrado_rsa.js"></script>
+    </body>
+</html>
